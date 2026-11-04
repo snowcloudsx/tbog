@@ -19,6 +19,8 @@ const PARTS = [
 	}
 ];
 const PACK_NAME = "index.pck";
+// Unique per build, so a cached copy of an older part is never stitched in.
+const VERSION = "__VERSION__";
 
 self.addEventListener("install", () => self.skipWaiting());
 
@@ -38,7 +40,7 @@ async function streamPack(packUrl) {
 		async start(controller) {
 			try {
 				for (const part of PARTS) {
-					const response = await fetch(new URL(part.name, packUrl).href);
+					const response = await fetch(new URL(`${part.name}?v=${VERSION}`, packUrl).href, { cache: "no-cache" });
 					if (!response.ok || !response.body) {
 						throw new Error(`Could not load ${part.name} (HTTP ${response.status}).`);
 					}
