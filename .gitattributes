@@ -1,0 +1,5 @@
+# Build artifacts: never touch line endings or diffs.
+* -text
+pck.part* binary
+*.wasm binary
+*.pck binary
