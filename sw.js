@@ -15,12 +15,12 @@ const PARTS = [
 	},
 	{
 		"name": "pck.part003",
-		"size": 59473992
+		"size": 59474312
 	}
 ];
 const PACK_NAME = "index.pck";
 // Unique per build, so a cached copy of an older part is never stitched in.
-const VERSION = "fbdf8acbe693";
+const VERSION = "84b5781025fe";
 
 self.addEventListener("install", () => self.skipWaiting());
 
