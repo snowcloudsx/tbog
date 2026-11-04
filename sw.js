@@ -20,7 +20,7 @@ const PARTS = [
 ];
 const PACK_NAME = "index.pck";
 // Unique per build, so a cached copy of an older part is never stitched in.
-const VERSION = "__VERSION__";
+const VERSION = "5ed246c6975b";
 
 self.addEventListener("install", () => self.skipWaiting());
 
