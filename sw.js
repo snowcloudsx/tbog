@@ -15,7 +15,7 @@ const PARTS = [
 	},
 	{
 		"name": "pck.part003",
-		"size": 59380556
+		"size": 59457888
 	}
 ];
 const PACK_NAME = "index.pck";
